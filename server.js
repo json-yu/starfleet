@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 const { ApolloServer } = require('apollo-server');
-const typeDefs = `${fs.readFileSync(__dirname.concat('/graphqlsrc/models/tourModel.graphql'), 'utf8')}` // this path is for testing purpose and should be dynamic on fix.
+const typeDefs = fs.readFileSync('./graphqlsrc/models/gqlSDL.gql', 'utf8') // this path is for testing purpose and should be dynamic on fix.
 const resolvers = require('./resolvers')
 
 
 // db connection 
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
+// const DB = process.env.DATABASE.replace(
+//   '<PASSWORD>',
+//   process.env.DATABASE_PASSWORD
+// );
 
-mongoose.connect(DB, { useNewUrlParser: true, useUnifiedTopology:	true, dbName: 'natours' })
+mongoose.connect('mongodb+srv://chunkoftofu:chickenpotpie1@sense8cluster-v4ozn.mongodb.net/test', { useNewUrlParser: true, useUnifiedTopology:	true, dbName: 'starwars' })
   .then(() => console.log('MongoDB successfully connected'))
   .catch( err => console.log('Error connecting to db: ', err));
 

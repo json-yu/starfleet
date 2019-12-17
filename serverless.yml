@@ -1,0 +1,23 @@
+org: jyujson
+app: starfleet-apollo-lambda
+service: apollo-lambda-test
+provider:
+  name: aws
+  runtime: nodejs8.10
+functions:
+  GraphQLPost:
+    handler: graphql.graphqlHandler
+    events:
+    - http:
+        path: /graphql
+        method: post
+        cors: true
+        integration: lambda-proxy
+  GraphQLPlayground:
+    handler: graphql.graphqlHandler
+    events:
+    - http:
+        path: /graphql
+        method: get
+        cors: true
+        integration: lambda-proxy
