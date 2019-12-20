@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://github.com/Traversal-Labs/starfleet">
-  <img width="300" height="300" src="https://imgur.com/HeYYDQa">
+  <img width="300" height="300" src="https://i.ibb.co/Kw2gt2R/starfleet-logo.jpg">
 </a>
 </div>
 
