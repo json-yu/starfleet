@@ -1,7 +1,7 @@
 {
   "name": "starfleet-command",
   "version": "0.1.3",
-  "description": "Creates GraphQL pieces from Mongoose schemas with full CRUD functionality with options to deploy to docker.",
+  "description": "Instantly spin-up GraphQL services from your existing MongoDB/mongoose schemas, and deploy them to docker.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
